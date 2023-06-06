@@ -1,0 +1,49 @@
+<mat-card class="card">
+  <mat-card-title>Add your exercise!</mat-card-title>
+  <br>
+
+  <mat-form-field appearance="fill" class="form">
+    <mat-label>Select exercise type</mat-label>
+    <mat-select [(value)]="type">
+      <mat-option value="run">Run</mat-option>
+      <mat-option value="walk">Walk</mat-option>
+      <mat-option value="bike">Bike</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill" class="form">
+    <mat-label>Choose the exercise date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="date" disabled="{{this.check}}">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill" class="form">
+    <mat-label>Minutes of exercise</mat-label>
+    <input matInput [(ngModel)]="minutes" type="number" max="720" step="15" min="30">
+  </mat-form-field>
+  <br>
+
+  <mat-slider [(ngModel)]="minutes" thumbLabel tickInterval="1000"
+  step="15"
+  min="30"
+  max="720" aria-label="units" class="form"></mat-slider>
+  <br>
+
+  <mat-form-field appearance="fill" class="form">
+    <mat-label>Calories burned</mat-label>
+    <input matInput [(ngModel)]="calories" type="number" max="6000" step="250" min="1000" >
+  </mat-form-field>
+  <br>
+
+  <mat-slider [(ngModel)]="calories" thumbLabel tickInterval="1000"
+  step="250"
+  min="1000"
+  max="6000" aria-label="units" class="form"></mat-slider>
+  <br>
+
+  <button mat-button color="accent" routerLink="/" (click)="save()">Save</button>
+
+</mat-card>

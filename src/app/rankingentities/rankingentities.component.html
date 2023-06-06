@@ -1,0 +1,43 @@
+
+<mat-card class="parecord-card">
+  <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile>
+      <h2>{{index}}</h2>
+    </mat-grid-tile>
+    <mat-grid-tile><igx-avatar [initials]="name"
+      [roundShape]="true"
+      size="medium"
+      [bgColor]="profileColor">
+    </igx-avatar>
+  </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="card">
+        <div class="titlecal">{{ranking.avgcalories}} Cal</div>
+
+        <section class="calories">
+          <mat-progress-bar
+            color="warn"
+            [mode]="mode"
+            [value]=[calprogressvalue]>
+          </mat-progress-bar>
+        </section>
+        <div class="caloriesgoal">{{calprogressvalue}}%</div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="card">
+        <div class="titletime">{{ranking.avgminutes}} Min</div>
+        <section class="time">
+          <mat-progress-bar
+            [color]="color"
+            [mode]="mode"
+            [value]=[minprogressvalue]>
+          </mat-progress-bar>
+        </section>
+        <div class="timegoal">{{minprogressvalue}}%</div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+</mat-card>

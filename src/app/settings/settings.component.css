@@ -1,0 +1,30 @@
+/*TODO: you will need to adjust CSS to replicate what is shown on the video.*/
+.setting-card{
+    height: 50%;
+    width: 50%;
+}
+.title{
+  justify-content: center;
+    /* text-align: center; */
+}
+.main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mat-form-field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
